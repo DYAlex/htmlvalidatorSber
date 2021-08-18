@@ -1,24 +1,61 @@
 
 const tests = [
-	{
-		"msg": 'div с классом active и содержимым "велосипед"',
-		"tag": 'div',
-		"class": 'active',
-		"id": undefined,
-		"innerText": "велосипед",
-		"styleList": {
-			"backgroundColor": "rgb(35, 83, 35)",
-			"width": '340px'
-		}
-	},
+// <li>Карточка является элементом div с классом card </li>
+// <li>Карточка должны быть шириной 350px, padding и margin по 20px</li>
+// <li>Картинка должна быть шириной 100% относительно родительского элемента</li>
+// <li>Текст должен быть элементом p.</li>
+// <li>Кнопки внизу должны быть в отдельном div с классом btns</li>
+// <li>Кнопки представляют собой элементы span, у кнопок должен быть padding 10px</li>
+
 
 	{
-		"msg": 'p с содержимым "Я памятник воздвиг себе нерукотворный"',
-		"tag": 'p',
+		"msg": 'Карточка является элементом div с классом card ',
+		"tag": 'div',
+		"class": 'card',
+		"id": undefined
+	},
+	{
+		"msg": 'Карточка должны быть шириной 350px, padding и margin по 20px',
+		"tag": 'div',
+		"class": 'card',
+		"id": undefined,
+		"styleList": {
+			"width": '350px',
+			"padding": '20px',
+			"margin": '20px'
+		}
+	},
+	{
+		"msg": 'Картинка должна быть шириной 100% относительно родительского элемента',
+		"tag": 'div img',
 		"class": undefined,
 		"id": undefined,
-		"innerText": "Я памятник воздвиг себе нерукотворный"
+		"styleList": {
+			"width": '100%'
+		}
+	},
+	{
+		"msg": 'Текст должен быть элементом p.',
+		"tag": 'p',
+		"class": undefined,
+		"id": undefined
+	},
+	{
+		"msg": 'Кнопки внизу должны быть в отдельном div с классом btns',
+		"tag": 'div',
+		"class": 'btns',
+		"id": undefined
+	},
+	{
+		"msg": 'Кнопки представляют собой элементы span, у кнопок должен быть padding 10px',
+		"tag": 'div span',
+		"class": undefined,
+		"id": undefined,
+		"styleList": {
+			"padding": '10px'
+		}
 	}
+
 ]
 
 const testHandler = ()=>{
@@ -37,10 +74,13 @@ const testHandler = ()=>{
 			testResult = false;	
 		}else{
 			dom.querySelectorAll(selector).forEach(selectorElem=>{
-				testResult &&= (selectorElem.innerText.trim() === elem.innerText);
-				Object.entries(elem.styleList).forEach(style=>{
+				if (elem.innerText){
+					testResult &&= (selectorElem.innerText.trim() === elem.innerText);
+				}
+				try{
+					Object.entries(elem.styleList).forEach(style=>{
 					testResult &&= (selectorElem.style[style[0]] === style[1]);
-				})
+				})} catch{};
 			})
 		}
 		if (testResult){
