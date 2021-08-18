@@ -5,7 +5,11 @@ const tests = [
 		"tag": 'div',
 		"class": 'active',
 		"id": undefined,
-		"innerText": "велосипед"
+		"innerText": "велосипед",
+		"styleList": {
+			"backgroundColor": "rgb(35, 83, 35)",
+			"width": '340px'
+		}
 	},
 
 	{
@@ -28,14 +32,24 @@ const testHandler = ()=>{
 		if (elem.tag) selector	 += elem.tag;
 		if (elem.id) selector	 += `#${elem.id}`;
 		if (elem.class) selector += `.${elem.class}`;
-		console.log(selector);
-		console.log(dom.querySelector(selector));
-		console.log('_-_-');
-		if (dom.querySelector(selector) != null){
+		let testResult = true;
+		if (dom.querySelectorAll(selector).length === 0){
+			testResult = false;	
+		}else{
+			dom.querySelectorAll(selector).forEach(selectorElem=>{
+				testResult &&= (selectorElem.innerText.trim() === elem.innerText);
+				Object.entries(elem.styleList).forEach(style=>{
+					testResult &&= (selectorElem.style[style[0]] === style[1]);
+				})
+			})
+		}
+		if (testResult){
 			answer.classList.add('pos');
 		}else{
 			answer.classList.add('neg');
 		}
+
+
 		answer.innerText = elem.msg;
 		document.querySelector('#testResult').appendChild(answer);
 	})

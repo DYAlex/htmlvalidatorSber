@@ -1,7 +1,7 @@
-
+const regexpStyle = /^[^{@]+{[^}]+}/gm;
 const html = document.querySelector('#html');
 const css  = document.querySelector('#css');
-const btn  = document.querySelector('#submit');
+let btn  = document.querySelector('#submit');
 
 
 html.value = `
@@ -16,25 +16,39 @@ html.value = `
 </html>
 `;
 
+const cssHandler = (cssText, dom)=>{
+	[...cssText.match(regexpStyle)].map(style=>{
+		const selector = style.match(/^([^{@]+){/g)[0].replaceAll(/[\n{]/g, '');
+		const styleProps = style.match(/{[^}]+}/g)[0].replaceAll(/[\n{}]/g, '');
+		return [selector, styleProps]
+	}).forEach(style=>{
+		[...dom.querySelectorAll(style[0])].forEach(elem=>elem.style = style[1]);
+	})
+
+}
+
 const inputHandler = ()=>{
 	const result = document.createElement('iframe');
 	document.querySelector('#forResult').innerText = '';
 	document.querySelector('#forResult').appendChild(result);
+	const innerDom = result.contentDocument;
+
 	const htmlValue = html.value;
 	const cssValue = css.value;
 	const styleTag = document.createElement('style');
-	const innerDom = result.contentDocument;
 
 	styleTag.type = 'text/css';
 	if (styleTag.styleSheet){
-	  // This is required for IE8 and below.
 	  styleTag.styleSheet.cssText = cssValue;
 	} else {
 	  styleTag.appendChild(document.createTextNode(cssValue));
 	}
 	innerDom.write('');
 	innerDom.write(htmlValue);
-	innerDom.querySelector('head').appendChild(styleTag);
+	try{
+		cssHandler(css.value, innerDom);
+	}catch{}
+	// innerDom.querySelector('head').appendChild(styleTag);
 };
 
 
