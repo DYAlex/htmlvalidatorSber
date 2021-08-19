@@ -91,8 +91,8 @@ h3 {
 }
 
 #testResult .pos{
-	background-color: #00573c;
-	color: white;
+    color: #04bd7a;
+    font-weight: bold;
 }
 
 #testResult .neg{
@@ -116,4 +116,14 @@ h3 {
     border-radius: 4px;
     border-color: #d5d5d5;
     padding: 1px 4px 2px;
+}
+
+#testResult .neg::before{
+    content: '\274C';
+	margin-right: 5px;
+}
+
+#testResult .pos::before {
+	content: "\2705";
+    margin-right: 5px;
 }

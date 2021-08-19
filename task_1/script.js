@@ -16,6 +16,14 @@ html.value = `
 </html>
 `;
 
+css.value = `
+body {
+  font-family: sans-serif;
+  color: rgb(12, 66, 31);
+  background-color: rgb(111, 158, 128);
+}
+`;
+
 const cssHandler = (cssText, dom)=>{
 	[...cssText.match(regexpStyle)].map(style=>{
 		const selector = style.match(/^([^{@]+){/g)[0].replaceAll(/[\n{]/g, '');

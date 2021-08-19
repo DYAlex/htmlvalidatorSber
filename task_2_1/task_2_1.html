@@ -7,30 +7,34 @@
 </head>
 <body>
 	<div class="task">
+		<b>Задачи:</b>
 		<ul>
-			<li>Добавить класс accent-text для тега <p>Автоматическое включение и отключение</p></li>
-			<li>Сделать элементы с классом accent-text жирными "bold"</li>
-			<li>Указать цвет текста "rgb(239, 123, 24)"</li>
+			<li>Добавить класс <span class="code">accent-text</span> для тега <span class="code">
+				&lt;p&gt;Автоматическое включение и отключение&lt;/p&gt;
+			</span>
+			</li>
+			<li>Сделать текст элементов с классом <span class="code">accent-text</span> "жирным" <span class="code">font-weight: bold</span></li>
+			<li>Сделать цвет текста элементов с классом <span class="code">accent-text</span> равным <span class="code">rgb(239, 123, 24)</span></li>
 		</ul>
 	</div>
 	<ul id="testResult"></ul>
-	<button id="submit">▶</button>
+	<button id="submit">Проверить</button>
 	<div class="fields">
 		<div class="field">
-			<h2>HTML:</h2>
+			<h3>HTML:</h3>
 			<textarea id="html"
 			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
 			></textarea>
 		</div>
 		<div class="field">
-			<h2>CSS:</h2>
+			<h3>CSS:</h3>
 			<textarea id="css" 
 			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
 			></textarea>
 		</div>
 	</div>
 
-	<h2>Результат</h2>
+	<h3>Результат:</h3>
 	<div id="forResult"></div>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="tests.js"></script>
