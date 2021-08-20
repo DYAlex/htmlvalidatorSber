@@ -7,37 +7,37 @@
 </head>
 <body>
 	<div class="task">
-		<b>необходимо реализовать карточку с описанием товара</b>
-		<div><img src="media/image.png" width="200"></div>
-		<b>Описание задания</b>
+		<b>Реализовать карточку с описанием товара</b>
+		<div><img src="media/image.png" width="300"></div>
+		<b>Задачи:</b>
 		<ul>
-			<li>Карточка является элементом div с классом card </li>
-			<li>Карточка должны быть шириной 350px, padding и margin по 20px</li>
-			<li>Картинка должна быть шириной 100% относительно родительского элемента</li>
-			<li>Текст должен быть элементом p.</li>
-			<li>Кнопки внизу должны быть в отдельном div с классом btns</li>
-			<li>Кнопки представляют собой элементы span, у кнопок должен быть padding 10px</li>
+			<li>Карточка является элементом <span class="code">div</span> с классом <span class="code">card</span></li>
+			<li>Карточка должна быть шириной 350px, padding и margin по 20px, а фон белый, выставить используя стиль background: white;</li>
+			<li>У карточки должна быть картинка, ссылка на картинку https://i.pinimg.com/564x/36/a1/91/36a19108f3088af7315231dc919b166a.jpg</li>
+			<li>У картинки должна быть ширина 100% относительно родительского элемента, выставить используя стиль <span class="code">width: 100%</span></li>
+			<li>Должен быть заголовок h3 с текстом <span class="code">Солнечные панели Green Robotic</span></li>
+			<li>После заголовка должен быть элемент p с текстом <span class="code">24/7 Мониторинг электроэнергии</span></li>
 		</ul>
 
 	</div>
 	<ul id="testResult"></ul>
-	<button id="submit">▶</button>
+	<button id="submit">Проверить</button>
 	<div class="fields">
 		<div class="field">
-			<h2>HTML:</h2>
+			<h3>HTML:</h3>
 			<textarea id="html"
 			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
 			></textarea>
 		</div>
 		<div class="field">
-			<h2>CSS:</h2>
+			<h3>CSS:</h3>
 			<textarea id="css" 
 			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
 			></textarea>
 		</div>
 	</div>
 
-	<h2>Результат</h2>
+	<h3>Результат</h3>
 	<div id="forResult"></div>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="tests.js"></script>
