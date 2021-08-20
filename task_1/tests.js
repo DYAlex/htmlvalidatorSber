@@ -10,15 +10,15 @@ const tests = [
 
 
 	{
-		"msg": 'Карточка является элементом <span class="code">div</span> с классом <span class="code">card</span>',
+		"msg": 'Карточка является элементом <span class="code">div</span>',
 		"tag": 'div',
-		"class": 'card',
+		"class": undefined,
 		"id": undefined
 	},
 	{
 		"msg": 'Карточка должна быть шириной 350px, padding и margin по 20px, а фон белый, выставить используя стиль background: white;',
 		"tag": 'div',
-		"class": 'card',
+		"class": undefined,
 		"id": undefined,
 		"styleList": {
 			"width": '350px',
