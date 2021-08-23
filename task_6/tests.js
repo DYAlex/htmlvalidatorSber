@@ -2,19 +2,36 @@
 const tests = [
 
 	{
-		"msg": "Добавить тег link, который подгружает шрифт (ссылка https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap)",
-		"tag": 'head link[href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"]',
+		"msg": "необходимо обернуть теги a, nav и div в тег header",
+		"tag": 'header',
 		"class": undefined,
 		"id": undefined
 	},
 	{
-		"msg": "Добавить для body стиль font-family: 'Raleway'",
-		"tag": 'body',
+		"msg": "в элемент с классом лого укажите ссылку на логотип media/logo.png",
+		"tag": 'img[src="media/logo.png"]',
+		"class": 'logo',
+		"id": undefined
+	},
+	{
+		"msg": "в тег div добавьте кнопку с текстом Sign in",
+		"tag": 'div button:nth-child(1)',
 		"class": undefined,
 		"id": undefined,
-		'styleList': {
-			"font-family": "Raleway, sans-serif"
-		}
+		'innerText': 'Sign in'
+	},
+	{
+		"msg": "в тег div добавьте кнопку с текстом Log in",
+		"tag": 'div button:nth-child(2)',
+		"class": undefined,
+		"id": undefined,
+		'innerText': 'Log in'
+	},
+	{
+		"msg": "присвойте div с кнопками класс btns",
+		"tag": 'header>div',
+		"class": 'btns',
+		"id": undefined
 	},
 
 ]

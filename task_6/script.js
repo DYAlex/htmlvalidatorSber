@@ -3,111 +3,67 @@ const html = document.querySelector('#html');
 const css  = document.querySelector('#css');
 let btn  = document.querySelector('#submit');
 
+// <li>в тег div добавьте две кнопки (Sign in, Log in)</li>
+// <li>присвойте div с кнопками класс <span class="code">btns</span></li>
 
 html.value = `
+
 <html>
 
-<head>
-  <link rel="stylesheet" href="main.css">
-</head>
+  <head></head>
 
 <body>
-  <div class="card">
-    <div class="card__left">
-      <img src="https://i.pinimg.com/564x/36/a1/91/36a19108f3088af7315231dc919b166a.jpg" height="495" width="495">
+    <a href='/'> 
+      <img class='logo' src=''>
+    </a>
+    <nav>
+      <span>О нас</span>  
+      <span>Товары</span> 
+      <span>Услуги</span> 
+    </nav>
+    <div>
     </div>
-    <div class="card__right">
-      <h1>Солнечные панели <br> Green Robotic</h1>
-      <h3>от 20 000₽</h3>
-      <h4>Особенности:</h4>
-      <p>24/7 Мониторинг электроэнергии</p>
-      <p class="accent-text">Автоматическое включение и отключение</p>
-      <button type="link" href="#" class="card__order-button">Заказать</button>
-    </div>
-  </div>
 </body>
 
 </html>
+
 `;
 
 css.value = `
+
 body {
   background-color: #6f9e80;
   margin: 0;
   font-family: sans-serif;
 }
 
-.card {
-  background-color: #fff;
-  width: 900px;
-  height: 495px;
-  margin: auto;
-  margin-top: 50px;
-
-  border-radius: 8px;
-  box-shadow: 0px 0px 29px rgba(25, 78, 44, 0.5);
-
+header{
+  padding: 20px;
   display: flex;
-}
-
-.card img {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-.card__left {
-  display: flex;
+  justify-content: space-between;
   align-items: center;
+  background-color: #95a5a6;
+  color: #2c3e50;
 }
 
-.card__right {
-  padding: 15px;
+nav span{
+  margin-left: 20px;
 }
 
-h1 {
-  color: #0c421f;
-  font-weight: 400;
-  font-size: 24px;
-  letter-spacing: 1.98px;
+.logo{
+  width: 100px;
 }
 
-h3,
-h4 {
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 16px;
-  color: #0c421f;
-  letter-spacing: 1px;
-  padding-bottom: 5px;
-  margin-top: 50px;
-}
-
-p {
-  font-weight: 400;
-  font-size: 14px;
-  color: #0c421f;
-  letter-spacing: 1px;
-}
-
-button {
-  text-align: center;
-  padding: 10px 15px;
-  border-radius: 25px;
-  font-size: 18px;
-  color: white;
-  background-color: #ef7b18;
-  cursor: pointer;
+.btns button{
   border: none;
-  box-shadow: 0px 4px 10px rgb(239 123 24 / 36%);
-  margin-top: 20px;
+  background-color: #2c3e50;
+  color: #95a5a6;
+  padding: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease;
 }
 
-.accent-text {
-  color: #ef7b18;
-  font-weight: bold;
-}
-
-`
+`;
 
 const cssHandler = (cssText, dom)=>{
 	[...cssText.match(regexpStyle)].map(style=>{
