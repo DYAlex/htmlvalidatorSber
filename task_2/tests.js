@@ -1,20 +1,36 @@
 
 const tests = [
-// <li>Необходимо первому div элементу добавить атрибут id со значением links_scale</li>
-// <li>Необходимо второму div элементу добавить атрибут id со значением links_round</li>
+// <li>Добавить класс accent-text для тега <p>Автоматическое включение и отключение</p></li>
+// <li>Сделать элементы с классом accent-text жирными "bold"</li>
+// <li>Указать цвет текста "rgb(239, 123, 24)"</li>
+
 
 	{
-		"msg": 'Необходимо первому div элементу добавить атрибут id со значением links_scale',
-		"tag": 'div:first-child',
-		"class": undefined,
-		"id": 'links_scale'
+		"msg": 'Добавить класс accent-text для тега <p>Автоматическое включение и отключение</p>',
+		"tag": 'p',
+		"class": 'accent-text',
+		"id": undefined,
+		'innerText': 'Автоматическое включение и отключение'
 	},
 	{
-		"msg": 'Необходимо второму div элементу добавить атрибут id со значением links_round',
-		"tag": 'div:nth-child(2)',
-		"class": undefined,
-		"id": 'links_round'
+		"msg": 'Сделать элементы с классом accent-text жирными "bold"',
+		"tag": 'p',
+		"class": 'accent-text',
+		"id": undefined,
+		"styleList": {
+			"font-weight": 'bold'
+		}
 	},
+	{
+		"msg": 'Указать цвет текста "rgb(239, 123, 24)"',
+		"tag": 'p',
+		"class": 'accent-text',
+		"id": undefined,
+		"styleList": {
+			"color": 'rgb(239, 123, 24)'
+		}
+	}
+
 ]
 
 const testHandler = ()=>{
