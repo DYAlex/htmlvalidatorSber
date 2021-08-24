@@ -5,35 +5,37 @@ let btn  = document.querySelector('#submit');
 
 
 html.value = `
-
 <html>
-
 <head>
 </head>
 
 <body>
-  <div class='map map_1'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-  </div>
-  <div class='map map_2'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-  </div>
-  <div class='map map_3'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-  </div>
+	<form>
+		<div class='field'>
+			<label>Укажите ваше имя: </label>
+			<input id='name__input' type='text'>
+		</div>
+		<div class='field'>
+			<label for='lastname__input'>Укажите вашу фамилию: </label>
+			<input id='lastname__input' type='text'>
+		</div>
+		<div class='field'>
+			<label for='age_input'>Укажите ваш возраст: </label>
+			<input id='age_input' type='text'>
+		</div>
+		<div class='field'>
+			<label for='phone__input'>Укажите ваш телефон: </label>
+			<input id='phone__input' type='text'>
+		</div>
+	<button>Отправить	</button>
+	</form>
 </body>
 
 </html>
-
 `;
 
 css.value = `
+
 
 body {
   background-color: #6f9e80;
@@ -41,17 +43,52 @@ body {
   font-family: sans-serif;
 }
 
-.map{
-  height: 200px;
-  padding: 20px;
-  background-image: url('media/map.jpeg');
-  background-position: bottom;
-  background-size: 20% 100%;
-  margin-bottom: 100px;
+label{
+	margin-bottom: 5px;
 }
 
-.mario{
-  width: 50px;
+input{
+	padding: 5px;
+	border-radius: 10px;
+	border: none;
+}
+
+input:focus-visible{
+	outline: 0;
+}
+
+button:focus-visible{
+	outline: 0;
+}
+
+input:focus-visible{
+	box-shadow: 2px 2px 10px black;
+}
+
+button:focus-visible{
+	box-shadow: 2px 2px 10px black;
+}
+
+form{
+	padding: 20px;
+	display: flex;
+	width: 250px;
+	flex-direction: column;
+	align-items: stretch;
+	background-color: #2980b9;
+	color: #ecf0f1;
+}
+
+.field{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+button{
+	padding: 5px;
+	border-radius: 10px;
+	border: none;	
 }
 
 `
@@ -88,7 +125,7 @@ const inputHandler = ()=>{
 	try{
 		cssHandler(css.value, innerDom);
 	}catch{}
-	// innerDom.querySelector('head').appendChild(styleTag);
+	innerDom.querySelector('head').appendChild(styleTag);
 };
 
 

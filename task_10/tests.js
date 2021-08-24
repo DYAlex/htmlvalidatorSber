@@ -1,37 +1,27 @@
 
 const tests = [
 
+// <li>Свяжите поле ввода для имени с соответствующим тегом label с помощью атрибута for</li>
+// <li>Добавьте для поля ввода телефона placeholder со значением 8-999-999-99-99</li>
+// <li>Для поля ввода возраста укажите тип "число" и минимальное значение 0, а максимальное 150</li>
+
 	{
-		"msg": "В div с классом map_1 расположите всех марио по вертикали по центру, а по горизонтали так, чтобы все свободное пространство было равномерно распределено между элементами",
-		"tag": '.map_1',
+		"msg": "Свяжите поле ввода для имени с соответствующим тегом label с помощью атрибута for",
+		"tag": '.field:nth-child(1) label[for="name__input"]',
 		"class": undefined,
-		"id": undefined,
-		'styleList': {
-			'display': 'flex',
-			'justify-content': 'space-between',
-			'align-items': 'center'
-		}
+		"id": undefined
 	},
 	{
-		"msg": "В div с классом map_2 растяните всех марио по вертикали, а по горизонтали сместите вправо",
-		"tag": '.map_2',
+		"msg": "Добавьте для поля ввода телефона placeholder со значением 8-999-999-99-99",
+		"tag": '.field:nth-child(4) input[placeholder="8-999-999-99-99"]',
 		"class": undefined,
-		"id": undefined,
-		'styleList': {
-			'display': 'flex',
-			'justify-content': 'space-between'
-		}
+		"id": undefined
 	},
 	{
-		"msg": "В div с классом map_2 растяните всех марио по вертикали, а по горизонтали сместите вправо",
-		"tag": '.map_3',
+		"msg": "Для поля ввода возраста укажите тип 'число'' и минимальное значение 0, а максимальное 150",
+		"tag": '.field:nth-child(3) input[type="number"][min="0"][max="150"]',
 		"class": undefined,
-		"id": undefined,
-		'styleList': {
-			'display': 'flex',
-			'flex-direction': 'column',
-			'align-items': 'center'
-		}
+		"id": undefined
 	},
 
 ]
