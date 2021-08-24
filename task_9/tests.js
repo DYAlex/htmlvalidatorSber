@@ -2,21 +2,50 @@
 const tests = [
 
 	{
-		"msg": "Добавить тег link, который подгружает шрифт (ссылка https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap)",
-		"tag": 'head link[href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"]',
-		"class": undefined,
-		"id": undefined
+		"msg": "У элемента с классом sq_1 добавьте отступ margin с права 20px",
+		"tag": 'div',
+		"class": 'sq_1',
+		"id": undefined,
+		'styleList': {
+			'margin-right': '20px'
+		}
 	},
 	{
-		"msg": "Добавить для body стиль font-family: 'Raleway'",
-		"tag": 'body',
+		"msg": "У элемента с классом sq_2 добавьте отступ margin по горизонтали 20px, а по вертикали 40px",
+		"tag": 'div',
+		"class": 'sq_2',
+		"id": undefined,
+		'styleList': {
+			'margin': '40px 20px'
+		}
+	},
+	{
+		"msg": "У элемента с классом sq_3 добавьте отступ margin со всех сторон 10px",
+		"tag": 'div',
+		"class": 'sq_3',
+		"id": undefined,
+		'styleList': {
+			'margin': '10px'
+		}
+	},
+	{
+		"msg": "У элемента с классом sq_4 добавьте отступы margin: сверху 10px, c права 20px, снизу 30px, слева 40px.",
+		"tag": 'div',
+		"class": 'sq_4',
+		"id": undefined,
+		'styleList': {
+			'margin': '10px 20px 30px 40px'
+		}
+	},
+	{
+		"msg": "У всех элементов div с квадратами должен быть внутренний отступ padding 10px со всех сторон",
+		"tag": '.squares div',
 		"class": undefined,
 		"id": undefined,
 		'styleList': {
-			"font-family": "Raleway, sans-serif"
+			'padding': '10px'
 		}
-	},
-
+	}
 ]
 
 const testHandler = ()=>{
