@@ -2,18 +2,35 @@
 const tests = [
 
 	{
-		"msg": "Добавить тег link, который подгружает шрифт (ссылка https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap)",
-		"tag": 'head link[href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"]',
-		"class": undefined,
-		"id": undefined
-	},
-	{
-		"msg": "Добавить для body стиль font-family: 'Raleway'",
-		"tag": 'body',
+		"msg": "В div с классом map_1 расположите всех марио по вертикали по центру, а по горизонтали так, чтобы все свободное пространство было равномерно распределено между элементами",
+		"tag": '.map_1',
 		"class": undefined,
 		"id": undefined,
 		'styleList': {
-			"font-family": "Raleway, sans-serif"
+			'display': 'flex',
+			'justify-content': 'space-between',
+			'align-items': 'center'
+		}
+	},
+	{
+		"msg": "В div с классом map_2 растяните всех марио по вертикали, а по горизонтали сместите вправо",
+		"tag": '.map_2',
+		"class": undefined,
+		"id": undefined,
+		'styleList': {
+			'display': 'flex',
+			'justify-content': 'space-between'
+		}
+	},
+	{
+		"msg": "В div с классом map_2 растяните всех марио по вертикали, а по горизонтали сместите вправо",
+		"tag": '.map_3',
+		"class": undefined,
+		"id": undefined,
+		'styleList': {
+			'display': 'flex',
+			'flex-direction': 'column',
+			'align-items': 'center'
 		}
 	},
 

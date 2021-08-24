@@ -30,7 +30,7 @@ const cssHandler = (cssText, dom)=>{
 		const styleProps = style.match(/{[^}]+}/g)[0].replaceAll(/[\n{}]/g, '');
 		return [selector, styleProps]
 	}).forEach(style=>{
-		[...dom.querySelectorAll(style[0])].forEach(elem=>elem.style = style[1]);
+		[...dom.querySelectorAll(style[0])].forEach(elem=>elem.style = elem.style.cssText+style[1]);
 	})
 
 }
