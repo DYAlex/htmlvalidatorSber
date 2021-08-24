@@ -1,20 +1,54 @@
 
 const tests = [
 
+// <li>В тег с классом links добавьте ссылку на гугл с классом google </li>
+// <li>Внутри этой ссылки вставьте картинку с атрибутом href media/google.png</li>
+// <li>В тег с классом links добавьте ссылку на яндекс c классом yandex </li>
+// <li>Внутри этой ссылки вставьте картинку с атрибутом href media/yandex.png</li>
+// <li>В тег с классом links добавьте ссылку на мэил c классом mail </li>
+// <li>Внутри этой ссылки вставьте картинку с атрибутом href media/mail.png</li>
+
 	{
-		"msg": "Добавить тег link, который подгружает шрифт (ссылка https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap)",
-		"tag": 'head link[href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"]',
+		"msg": "В тег с классом links добавьте ссылку на гугл с классом google (https://www.google.com)",
+		"tag": '.links a.google[href="https://www.google.com"]',
+		"class": 'google',
+		"id": undefined
+	},
+	{
+		"msg": "Внутри этой ссылки вставьте картинку с атрибутом href media/google.png",
+		"tag": '.links a.google img[src="media/google.png"]',
 		"class": undefined,
 		"id": undefined
 	},
 	{
-		"msg": "Добавить для body стиль font-family: 'Raleway'",
-		"tag": 'body',
+		"msg": "В тег с классом links добавьте ссылку на яндекс c классом yandex (https://yandex.ru)",
+		"tag": '.links a.yandex[href="https://yandex.ru"]',
+		"class": 'yandex',
+		"id": undefined
+	},
+	{
+		"msg": "Внутри этой ссылки вставьте картинку с атрибутом href media/yandex.png",
+		"tag": '.links a.yandex img[src="media/yandex.png"]',
 		"class": undefined,
-		"id": undefined,
-		'styleList': {
-			"font-family": "Raleway, sans-serif"
-		}
+		"id": undefined
+	},
+	{
+		"msg": "В тег с классом links добавьте ссылку на гугл с классом mail (https://mail.ru)",
+		"tag": '.links a.mail[href="https://mail.ru"]',
+		"class": 'mail',
+		"id": undefined
+	},
+	{
+		"msg": "Внутри этой ссылки вставьте картинку с атрибутом href media/mail.png",
+		"tag": '.links a.mail img[src="media/mail.png"]',
+		"class": undefined,
+		"id": undefined
+	},
+	{
+		"msg": "Сделайте так, чтобы ссылки открывались в новом окне",
+		"tag": '.links a[target="_blank"]',
+		"class": undefined,
+		"id": undefined
 	},
 
 ]
