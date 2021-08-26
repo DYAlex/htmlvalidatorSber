@@ -6,34 +6,47 @@ let btn  = document.querySelector('#submit');
 
 html.value = `
 
+
 <html>
 
 <head>
 </head>
 
 <body>
-  <div class='map map_1'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-  </div>
-  <div class='map map_2'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-  </div>
-  <div class='map map_3'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-  </div>
+<div class='images'>
+	<div class='block'>
+		<img src='media/1.jpeg'>
+		<span class='number'>1</span>
+	</div>
+	<div class='block photo_2'>
+		<img src='media/2.jpeg'>
+		<span class='number'>2</span>
+	</div>
+	<div class='block photo_3'>
+		<img src='media/3.jpeg'>
+		<span class='number'>3</span>
+	</div>
+	<div class='block photo_4'>
+		<img src='media/4.jpeg'>
+		<span class='number'>4</span>
+	</div>
+	<div class='block'>
+		<img src='media/5.jpeg'>
+		<span class='number'>5</span>
+	</div>
+
+</div>
+
 </body>
 
 </html>
 
+
+
 `;
 
 css.value = `
+
 
 body {
   background-color: #6f9e80;
@@ -41,19 +54,28 @@ body {
   font-family: sans-serif;
 }
 
-.map{
-  height: 200px;
-  padding: 20px;
-  background-image: url('media/map.jpeg');
-  background-position: bottom;
-  background-size: 20% 100%;
-  margin-bottom: 100px;
+.photos{
+	display: grid;
+	grid-template-rows: 300px 300px 300px;
+	grid-template-columns: 300px 300px 300px;
 }
 
-.mario{
-  width: 50px;
+.block{
+	position: relative;
 }
 
+.number{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	font-size: 30px;
+	text-shadow: 0px 0px 5px white
+}
+
+.photos img{
+	width: 100%;
+	height: 100%;
+}
 `
 
 const cssHandler = (cssText, dom)=>{

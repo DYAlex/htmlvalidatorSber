@@ -1,38 +1,49 @@
+/*
+
+.photo_4{
+	grid-column: 1 / 3;
+}
+
+
+*/
+
 
 const tests = [
 
 	{
-		"msg": "В div с классом map_1 расположите всех марио по вертикали по центру, а по горизонтали так, чтобы все свободное пространство было равномерно распределено между элементами",
-		"tag": '.map_1',
-		"class": undefined,
+		"msg": "Поменяйте в div с классом images название класса на photos",
+		"tag": 'body>div',
+		"class": 'photos',
+		"id": undefined
+	},
+	{
+		"msg": "Сформируйте первый ряд из фото 1 и 2, где второе фото в два раза шире первого",
+		"tag": 'div',
+		"class": 'photo_2',
 		"id": undefined,
-		'styleList': {
-			'display': 'flex',
-			'justify-content': 'space-between',
-			'align-items': 'center'
+		'styleList':{
+			'grid-column': '2 / 4'
 		}
 	},
 	{
-		"msg": "В div с классом map_2 растяните всех марио по вертикали, а по горизонтали сместите вправо",
-		"tag": '.map_2',
-		"class": undefined,
+		"msg": "Расположите третее фото на 2 строке на всю ширину",
+		"tag": 'div',
+		"class": 'photo_3',
 		"id": undefined,
-		'styleList': {
-			'display': 'flex',
-			'justify-content': 'space-between'
+		'styleList':{
+			'grid-column': '1 / 4'
 		}
 	},
 	{
-		"msg": "В div с классом map_2 растяните всех марио по вертикали, а по горизонтали сместите вправо",
-		"tag": '.map_3',
-		"class": undefined,
+		"msg": "Третья строка должна состоять из 4 и 5 фото, где 4 на всю ширину",
+		"tag": 'div',
+		"class": 'photo_4',
 		"id": undefined,
-		'styleList': {
-			'display': 'flex',
-			'flex-direction': 'column',
-			'align-items': 'center'
+		'styleList':{
+			'grid-column': '1 / 3'
 		}
-	},
+	}
+	
 
 ]
 
