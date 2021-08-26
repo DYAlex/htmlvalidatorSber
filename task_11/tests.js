@@ -1,38 +1,47 @@
 
+// <li>Укажите в качестве высоты и ширины элемента с классом box_3 половину ширины экрана</li>
 const tests = [
 
 	{
-		"msg": "В div с классом map_1 расположите всех марио по вертикали по центру, а по горизонтали так, чтобы все свободное пространство было равномерно распределено между элементами",
-		"tag": '.map_1',
-		"class": undefined,
+		"msg": "Укажите элементу с классом box_1 высоту на половину высоты экрана",
+		"tag": 'div',
+		"class": 'box_1',
 		"id": undefined,
 		'styleList': {
-			'display': 'flex',
-			'justify-content': 'space-between',
-			'align-items': 'center'
+			'height': '50vh'
 		}
 	},
 	{
-		"msg": "В div с классом map_2 растяните всех марио по вертикали, а по горизонтали сместите вправо",
-		"tag": '.map_2',
-		"class": undefined,
+		"msg": "Укажите элементу с классом box_2 ширину и высоту по 400px",
+		"tag": 'div',
+		"class": 'box_2',
 		"id": undefined,
 		'styleList': {
-			'display': 'flex',
-			'justify-content': 'space-between'
+			'height': '400px',
+			'width': '400px'
 		}
 	},
 	{
-		"msg": "В div с классом map_2 растяните всех марио по вертикали, а по горизонтали сместите вправо",
-		"tag": '.map_3',
-		"class": undefined,
+		"msg": "Укажите элементу с классом nested_2_1 ширину и высоту по 50%",
+		"tag": 'div',
+		"class": 'nested_2_1',
 		"id": undefined,
 		'styleList': {
-			'display': 'flex',
-			'flex-direction': 'column',
-			'align-items': 'center'
+			'height': '50%',
+			'width': '50%'
 		}
 	},
+	{
+		"msg": "Укажите в качестве высоты и ширины элемента с классом box_3 половину ширины экрана",
+		"tag": 'div',
+		"class": 'box_3',
+		"id": undefined,
+		'styleList': {
+			'height': '50vw',
+			'width': '50vw'
+		}
+	},
+	
 
 ]
 

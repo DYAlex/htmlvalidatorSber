@@ -12,21 +12,13 @@ html.value = `
 </head>
 
 <body>
-  <div class='map map_1'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
+  <div class='box_1'></div>
+  <div class='box_2'>
+  	<div class='nested_2_1'>
+	  	<div class='nested_2_1_1'></div>
+  	</div>
   </div>
-  <div class='map map_2'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-  </div>
-  <div class='map map_3'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-    <img class='mario' src='media/mario.png'>
-  </div>
+  <div class='box_3'></div>
 </body>
 
 </html>
@@ -41,17 +33,30 @@ body {
   font-family: sans-serif;
 }
 
-.map{
-  height: 200px;
-  padding: 20px;
-  background-image: url('media/map.jpeg');
-  background-position: bottom;
-  background-size: 20% 100%;
-  margin-bottom: 100px;
+div{
+	width: 100px;
+	height: 100px;
+
 }
 
-.mario{
-  width: 50px;
+.box_1{
+	background-color: #1bb6ab;
+}
+
+.box_2{
+	background-color: #9c27b0;
+}
+
+.box_3{
+	background-color: #ff9800;
+}
+
+.nested_2_1{
+	background-color: #795548;
+}
+
+.nested_2_1_1{
+	background-color: #009688;
 }
 
 `
