@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="task">
+		<p>Зачастую возникает задача обезопасить данные сайта от копирования. Данная задача очень сложно выполняется на 100%, однако простые способы доработки front end позволяют добиться уже каких-то результатов. Одним из распространенных методов усложнить копирование картинок это просто натянуть поверх другой элемент. Таким образом когда пользователь будет кликать правой кнопкой выши по "картинке" на самом деле клик будет происходить на этом прозрачном элементе. <b>Давайте попробуем это реализовать.</b>
+
+		</p>
+		<br>
+		<div><b>Задачи:</b></div>
+		<ul>
+			<li>Добавьте в тег с классом image тег div с классом protect</li>
+			<li>Тегу с классом image добавьте относительное позиционирование</li>
+			<li>Тегу с классом protect добавьте абсолютное позиционирование и растените его на всю ширину и высоту родительского элемента</li>
+			<li>Переместите элемент с классом protect в верхний левый угол родительского элемента</li>
+		</ul>
+
+	</div>
+	<ul id="testResult"></ul>
+	<div class="submit_box">
+		<button id="submit">Проверить</button>
+		<p>Код: <span id="code">пример кода!</span></p>
+	</div>
+	<div class="fields">
+		<div class="field">
+			<h3>HTML:</h3>
+			<textarea id="html"
+			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
+			></textarea>
+		</div>
+		<div class="field">
+			<h3>CSS:</h3>
+			<textarea id="css" 
+			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
+			></textarea>
+		</div>
+	</div>
+
+	<h3>Результат:</h3>
+	<div id="forResult"></div>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="tests.js"></script>
+	<script type="text/javascript" src="calculate_code_obf.js"></script>	
+</body>
+</html>
