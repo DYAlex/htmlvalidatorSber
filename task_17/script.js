@@ -15,12 +15,13 @@ html.value = `
   <title>Document</title>
 </head>
 <body>
-  <img src="https://pngicon.ru/file/uploads/Osenniy-list-klena.png" alt="">
+  <img  src="media/train.png" alt="">
 </body>
 </html>
 `;
 
 css.value = `
+
 body {
   background-color: #6f9e80;
   margin: 0;
@@ -29,18 +30,20 @@ body {
 }
 
 @keyframes example {
-    0% {left: -100px}
-    50% {left: 60vw; top: 100px}
-    60% {left: 30vw; top: 100px}
-    100% {left: 100vw; top: 200px}
+    0% {left: 0;}
+    100% {left: 100vw;}
 }
 
 
 img{
-  width: 100px;
+  width: 300px;
   position: absolute;
-  left: -100px;
-  top: 200px;
+  left: 0;
+  bottom: 0;
+}
+
+.pause:hover{
+   animation-play-state: paused;
 }
 
 `

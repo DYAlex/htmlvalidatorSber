@@ -12,21 +12,21 @@ const tests = [
 		}
 	},
 	{
-		"msg": "Укажите для тега img имя продолжительность анимации в 3 секунды",
+		"msg": "Укажите для тега img имя продолжительность анимации в 10 секунд",
 		"tag": 'img',
 		"class": undefined,
 		"id": undefined,
 		'styleList':{
-			'animation-duration': '3s'
+			'animation-duration': '10s'
 		}
 	},
 	{
-		"msg": "Укажите для тега img колличество повторений анимации 2 раза",
+		"msg": "Укажите для тега img колличество повторений анимации 1 раза",
 		"tag": 'img',
 		"class": undefined,
 		"id": undefined,
 		'styleList':{
-			'animation-iteration-count': '2'
+			'animation-iteration-count': '1'
 		}
 	},
 	{
@@ -39,14 +39,13 @@ const tests = [
 		}
 	},
 	{
-		"msg": "Укажите для тега img функцию анимации linear",
+		"msg": "Укажите для тега img класс pause. Он позволит остановить поезд при наведении на него курсора",
 		"tag": 'img',
-		"class": undefined,
-		"id": undefined,
-		'styleList':{
-			'animation-timing-function': 'linear'
-		}
+		"class": 'pause',
+		"id": undefined
 	}
+
+			
 ]
 
 const testHandler = ()=>{
