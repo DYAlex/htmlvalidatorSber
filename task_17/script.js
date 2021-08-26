@@ -15,7 +15,7 @@ html.value = `
   <title>Document</title>
 </head>
 <body>
-  <img src="media/Osenniy-list-klena.png" alt="">
+  <img src="https://pngicon.ru/file/uploads/Osenniy-list-klena.png" alt="">
 </body>
 </html>
 `;
