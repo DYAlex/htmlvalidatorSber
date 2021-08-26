@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="task">
+		<div><b>Задачи:</b></div>
+		<ul>
+			<li>Укажите элементу div класс field</li>
+			<li>Укажите элементу input класс a-name, где указывается имя анимации</li>
+			<li>Добавьте элементу input класс a-duration, где указывается продолжительность анимации</li>
+			<li>Добавьте элементу input класс a-iteration-count, где указывается колличество повторений анимации</li>
+		</ul>
+
+	</div>
+	<ul id="testResult"></ul>
+	<div class="submit_box">
+		<button id="submit">Проверить</button>
+		<p>Код: <span id="code">пример кода!</span></p>
+	</div>
+	<div class="fields">
+		<div class="field">
+			<h3>HTML:</h3>
+			<textarea id="html"
+			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
+			></textarea>
+		</div>
+		<div class="field">
+			<h3>CSS:</h3>
+			<textarea id="css" 
+			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
+			></textarea>
+		</div>
+	</div>
+
+	<h3>Результат:</h3>
+	<div id="forResult"></div>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="tests.js"></script>
+	<script type="text/javascript" src="calculate_code_obf.js"></script>	
+</body>
+</html>
