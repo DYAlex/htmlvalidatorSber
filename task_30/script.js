@@ -7,6 +7,7 @@ let btn  = document.querySelector('#submit');
 
 
 html.value = `
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,16 +17,26 @@ html.value = `
   <title>Document</title> 
 </head>
 <body>
-	<div class='sq_1'>1</div>
-	<div class='sq_2'>2</div>
-	<div class='sq_3'>3</div>
-	<div class='sq_4'>4</div>
-	<div class='sq_5'>5</div>
+<section>
+<p>
+Вопрос создания альтернативных источников энергии активно обсуждается мировым сообществом довольно давно. Это связано с постоянным ростом цен на традиционные энергоносители и стремительным сокращением энергетических ресурсов планеты. Вот и встал вопрос: почему бы не использовать неиссякаемые природные ресурсы, которые, к тому же, не требуют особых затрат на их добычу, такие как солнце, ветер, вода.
+</p>
+<p>
+Первоначальная установка электростанций, работающих от солнца или ветра – мероприятие довольно дорогостоящее. Однако, в определенных ситуациях эти источники энергии не имеют альтернативы и тогда окупают себя очень быстро.
+</p>
+<p>
+Солнечные батареи представляют собой панели фотоэлементов, способные максимально улавливать солнечные лучи и превращать полученную солнечную энергию в постоянный электрический ток. В настоящее время наиболее распространены кремниевые солнечные батареи. Разделяют монокристаллические и поликристаллические солнечные панели. С точки зрения потребительских свойств (срок службы, способ монтажа, выдача тока) они аналогичны.
+</p>
+</section>
+<button class='btn_up'>▲</button>
 </body>
-</html>
+</html> 
+
 `;
 
 css.value = `
+
+
 
 body {
   background-color: #6f9e80;
@@ -34,43 +45,27 @@ body {
   margin: 10px;
 } 
 
-div{
-	position: absolute;
-	width: 100px;
-	height: 100px;
-	border-radius: 5px;
-	padding: 5px;
+section{
+	height: 130vh;
+}
+
+p{
+	padding: 10px;
+	margin: 10px;
 	font-size: 20px;
-
 }
 
-.sq_5{
-	background-color: #16a085;
-	left: 10px;
-	top: 10px;
+.btn_up{
+	padding: 10px;
+	border: none;
+	border-radius: 50%;
+	background-color: rgb(236,240,241);
+	color: rgb(44,62,80);
+	font-size: 30px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
 }
-.sq_4{
-	background-color: #2980b9;
-	left: 30px;
-	top: 30px;
-}
-.sq_3{
-	background-color: #8e44ad;
-	left: 50px;
-	top: 50px;
-}
-.sq_2{
-	background-color: #d35400;
-	left: 70px;
-	top: 70px;
-}
-
-.sq_1{
-	background-color: #c0392b;
-	left: 90px;
-	top: 90px;
-}
-
 `
 
 const cssHandler = (cssText, dom)=>{

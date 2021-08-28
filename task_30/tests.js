@@ -1,50 +1,52 @@
 
+
+
 const tests = [
 	{
-		"msg": 'Тег с классом sq_1 с правильным z-index',
-		"tag": 'div.sq_1',
+		"msg": 'Укажите тегу button класс btn_up',
+		"tag": 'button.btn_up',
+		"class": undefined,
+		"id": undefined
+	},
+	{
+		"msg": 'Укажите тегу button позиционирование со значением fixed',
+		"tag": 'button',
 		"class": undefined,
 		"id": undefined,
 		'styleList': {
-			'z-index': '5'
+			"position": 'fixed'
 		}
 	},
 	{
-		"msg": 'Тег с классом sq_2 с правильным z-index',
-		"tag": 'div.sq_2',
+		"msg": 'Расположите тег button с отступом в 20px от нижней и правой части экрана',
+		"tag": 'button',
 		"class": undefined,
 		"id": undefined,
 		'styleList': {
-			'z-index': '4'
+			"bottom": '20px',
+			"right": '20px'
 		}
 	},
 	{
-		"msg": 'Тег с классом sq_3 с правильным z-index',
-		"tag": 'div.sq_3',
+		"msg": 'Укажите тегу button цвет заднего фона со значением rgb(44,62,80), а цвет текста rgb(236,240,241)',
+		"tag": 'button.btn_up',
 		"class": undefined,
 		"id": undefined,
 		'styleList': {
-			'z-index': '3'
+			"color": 'rgb(44,62,80)',
+			"background-color": 'rgb(236,240,241)'
 		}
 	},
 	{
-		"msg": 'Тег с классом sq_4 с правильным z-index',
-		"tag": 'div.sq_4',
+		"msg": 'Добавьте тегу button внутренний отступ (padding) в 10 пикселей',
+		"tag": 'button.btn_up',
 		"class": undefined,
 		"id": undefined,
 		'styleList': {
-			'z-index': '2'
+			"padding": '10px'
 		}
 	},
-	{
-		"msg": 'Тег с классом sq_5 с правильным z-index',
-		"tag": 'div.sq_5',
-		"class": undefined,
-		"id": undefined,
-		'styleList': {
-			'z-index': '1'
-		}
-	},
+	
 
 ]
 
@@ -68,7 +70,11 @@ const testHandler = ()=>{
 				}
 				try{
 					Object.entries(elem.styleList).forEach(style=>{
-					testResult &&= (selectorElem.style[style[0]] === style[1]);
+					let value = selectorElem.style[style[0]];
+					if (value.substring(0, 3) === 'rgb'){
+						value = value.replaceAll(' ', '');
+					}
+					testResult &&= (value === style[1]);
 				})} catch{};
 			})
 		}
