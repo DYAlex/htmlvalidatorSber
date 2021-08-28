@@ -7,7 +7,12 @@
 */
 
 const tests = [
-
+	{
+		"msg": "Добавьте в тег img атрибут src со значением media/image.jpeg",
+		"tag": 'img[src="media/image.jpeg"]',
+		"class": undefined,
+		"id": undefined
+	},
 	{
 		"msg": "Добавьте в тег с классом image тег div с классом protect",
 		"tag": 'div.image div',

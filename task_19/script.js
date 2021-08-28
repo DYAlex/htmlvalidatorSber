@@ -16,7 +16,7 @@ html.value = `
 </head>
 <body>
   <div class='image'>
-    <img src='media/image.jpeg'>
+    <img src=''>
   </div>
 </body>
 </html>
