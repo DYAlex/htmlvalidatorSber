@@ -25,7 +25,13 @@ const tests = [
 		"tag": 'button:nth-child(4) i',
 		"class": 'fas.fa-arrow-left',
 		"id": undefined
-	}
+	},
+	{
+		"msg": "Добавить всем кнопкам класс btn",
+		"tag": '.btn:nth-child(4)',
+		"class": undefined,
+		"id": undefined
+	},
 	
 
 ]

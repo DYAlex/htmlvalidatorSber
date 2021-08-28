@@ -34,7 +34,7 @@ body {
   font-family: sans-serif;
   padding: 20px;
 }
-button{
+.btn{
 	border: none;
 	color: white;
 	background-color: #2c3e50;
@@ -43,11 +43,11 @@ button{
 	transition: box-shadow 0.5s ease;
 }
 
-button+button{
+.btn+.btn{
 	margin-left: 10px;
 }
 
-button:hover{
+.btn:hover{
 	box-shadow: 10px 10px 10px black;
 }
 
