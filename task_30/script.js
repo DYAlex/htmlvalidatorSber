@@ -1,80 +1,80 @@
 const regexpStyle = /^[^{@]+{[^}]+}/gm;
+const clearRegexp = /^\@[a-z {}\n0-9%:\-\;]+}\n}$/gm;
 const html = document.querySelector('#html');
 const css  = document.querySelector('#css');
 let btn  = document.querySelector('#submit');
 
 
+
 html.value = `
-
-
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title> 
 </head>
-
 <body>
-<div class='images'>
-	<div class='block'>
-		<img src='media/1.jpeg'>
-	</div>
-	<div class='block photo_2'>
-		<img src='media/2.jpeg'>
-	</div>
-	<div class='block photo_3'>
-		<img src='media/3.jpeg'>
-	</div>
-	<div class='block photo_4'>
-		<img src='media/4.jpeg'>
-	</div>
-	<div class='block'>
-		<img src='media/5.jpeg'>
-	</div>
-
-</div>
-
+	<div class='sq_1'>1</div>
+	<div class='sq_2'>2</div>
+	<div class='sq_3'>3</div>
+	<div class='sq_4'>4</div>
+	<div class='sq_5'>5</div>
 </body>
-
 </html>
-
-
-
 `;
 
 css.value = `
-
 
 body {
   background-color: #6f9e80;
   margin: 0;
   font-family: sans-serif;
-}
+  margin: 10px;
+} 
 
-.photos{
-	display: grid;
-	grid-template-rows: 300px 300px 300px;
-	grid-template-columns: 300px 300px 300px;
-}
-
-.block{
-	position: relative;
-}
-
-.number{
+div{
 	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+	padding: 5px;
+	font-size: 20px;
+
+}
+
+.sq_5{
+	background-color: #16a085;
 	left: 10px;
 	top: 10px;
-	font-size: 30px;
-	text-shadow: 0px 0px 5px white
+}
+.sq_4{
+	background-color: #2980b9;
+	left: 30px;
+	top: 30px;
+}
+.sq_3{
+	background-color: #8e44ad;
+	left: 50px;
+	top: 50px;
+}
+.sq_2{
+	background-color: #d35400;
+	left: 70px;
+	top: 70px;
 }
 
-.photos img{
-	width: 100%;
-	height: 100%;
+.sq_1{
+	background-color: #c0392b;
+	left: 90px;
+	top: 90px;
 }
+
 `
 
 const cssHandler = (cssText, dom)=>{
-	[...cssText.match(regexpStyle)].map(style=>{
+	[...cssText.replace(clearRegexp, '').match(regexpStyle)].map(style=>{
 		const selector = style.match(/^([^{@]+){/g)[0].replaceAll(/[\n{]/g, '');
 		const styleProps = style.match(/{[^}]+}/g)[0].replaceAll(/[\n{}]/g, '');
 		return [selector, styleProps]
@@ -105,7 +105,7 @@ const inputHandler = ()=>{
 	try{
 		cssHandler(css.value, innerDom);
 	}catch{}
-	// innerDom.querySelector('head').appendChild(styleTag);
+	innerDom.querySelector('head').appendChild(styleTag);
 };
 
 

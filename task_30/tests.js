@@ -1,65 +1,59 @@
-/*
-
-.photo_4{
-	grid-column: 1 / 3;
-}
-
-
-*/
-
 
 const tests = [
 	{
-		"msg": "Сразу после каждого тега img добавьте тег span с порядковым номером картинки (от 1 до 5)",
-		"tag": 'img+span',
-		"class": 'number',
+		"msg": 'Тег с классом sq_1 с правильным z-index',
+		"tag": 'div.sq_1',
+		"class": undefined,
 		"id": undefined,
-	},
-
-	{
-		"msg": "Поменяйте в div с классом images название класса на photos",
-		"tag": 'body>div',
-		"class": 'photos',
-		"id": undefined
-	},
-	{
-		"msg": "Сформируйте первый ряд из фото 1 и 2, где второе фото в два раза шире первого",
-		"tag": 'div',
-		"class": 'photo_2',
-		"id": undefined,
-		'styleList':{
-			'grid-column': '2 / 4'
+		'styleList': {
+			'z-index': '5'
 		}
 	},
 	{
-		"msg": "Расположите третее фото на 2 строке на всю ширину",
-		"tag": 'div',
-		"class": 'photo_3',
+		"msg": 'Тег с классом sq_2 с правильным z-index',
+		"tag": 'div.sq_2',
+		"class": undefined,
 		"id": undefined,
-		'styleList':{
-			'grid-column': '1 / 4'
+		'styleList': {
+			'z-index': '4'
 		}
 	},
 	{
-		"msg": "Третья строка должна состоять из 4 и 5 фото, где 4 на всю ширину",
-		"tag": 'div',
-		"class": 'photo_4',
+		"msg": 'Тег с классом sq_3 с правильным z-index',
+		"tag": 'div.sq_3',
+		"class": undefined,
 		"id": undefined,
-		'styleList':{
-			'grid-column': '1 / 3'
+		'styleList': {
+			'z-index': '3'
 		}
-	}
-	
+	},
+	{
+		"msg": 'Тег с классом sq_4 с правильным z-index',
+		"tag": 'div.sq_4',
+		"class": undefined,
+		"id": undefined,
+		'styleList': {
+			'z-index': '2'
+		}
+	},
+	{
+		"msg": 'Тег с классом sq_5 с правильным z-index',
+		"tag": 'div.sq_5',
+		"class": undefined,
+		"id": undefined,
+		'styleList': {
+			'z-index': '1'
+		}
+	},
 
 ]
+
 
 const testHandler = ()=>{
 	const dom = document.querySelector('iframe').contentDocument;
 	document.querySelector('#testResult').innerText = '';
-
 	tests.forEach(elem=>{
 		const answer = document.createElement('li');
-
 		let selector = ''
 		if (elem.tag) selector	 += elem.tag;
 		if (elem.id) selector	 += `#${elem.id}`;
