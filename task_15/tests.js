@@ -1,6 +1,11 @@
 
 const tests = [
-
+	{
+		"msg": "Укажите элементу с идентификатором chb атрибут type со значением checkbox",
+		"tag": 'input#chb[type="checkbox"]',
+		"class": undefined,
+		"id": undefined
+	},
 	{
 		"msg": "Укажите элементу div класс field",
 		"tag": 'div',

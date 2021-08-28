@@ -15,7 +15,7 @@ html.value = `
 </head>
 <body>
     <div>
-		<input id='chb' type="checkbox">
+		<input id='chb'>
 		<label for='chb'></label>
     </div>
 </body>
