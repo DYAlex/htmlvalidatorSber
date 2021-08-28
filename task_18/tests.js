@@ -7,7 +7,12 @@
 */
 
 const tests = [
-
+	{
+		"msg": "Добавьте всем тегам div класс card",
+		"tag": 'div.card:nth-child(3)',
+		"class": undefined,
+		"id": undefined
+	},
 	{
 		"msg": "Внутрь первой карточки добавьте div с классом sticker и тектом sale",
 		"tag": 'body>div:nth-child(1) div',
@@ -40,7 +45,7 @@ const tests = [
 			'top': '0px',
 			'right': '0px'
 		}
-	}		
+	}
 ]
 
 const testHandler = ()=>{

@@ -15,20 +15,21 @@ html.value = `
   <title>Document</title>
 </head>
 <body>
-  <div class='card'>
+  <div>
     Очень дешевые и надежные солнечные батареи! Очень рекомендуем, сами используем. Покупайте наши батареи, вы будете рады, мы будем рады, все будут рады.
   </div>
-  <div class='card'>
+  <div>
     Обслуживание солнечных батарей! Очень важно, очень нужно. Без них батареи будут плохо работать, а нам нужно, чтобы они работали хорошо.
   </div>
-  <div class='card'>
-    Дополнительные панели для солнечных батарей. Сделайте свою батарею более эффективной и мозщной!
+  <div>
+    Дополнительные панели для солнечных батарей. Сделайте свою батарею более эффективной и мощной!
   </div>
 </body>
 </html>
 `;
 
 css.value = `
+
 
 body {
   background-color: #6f9e80;
@@ -45,7 +46,11 @@ body {
   width: 300px;
   background-color: darkblue;
   color: white;
-  
+  transition: box-shadow 0.5s ease;
+}
+
+.card:hover{
+  box-shadow: 10px 10px 10px black;
 }
 
 .sticker{
@@ -58,6 +63,7 @@ body {
   border-radius: 50%;
   transform: translate(50%, -50%) rotate(30deg);
 }
+
 `
 
 const cssHandler = (cssText, dom)=>{
