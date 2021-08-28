@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="task">
+		<div><b>Задачи:</b></div>
+		<ul>
+			<li>В теге <span class="code">select</span> добавьте атрибут name со значением <span class="code">type</span></li>
+			<li>В тег select добавьте тег <span class="code">option</span>, а внутрь тега напигите "монокристалический". У него должен быть атрибут <span class="code">value</span> со значением mono.</li>
+			<li>В тег select добавьте тег <span class="code">option</span>, а внутрь тега напигите "поликристалический". У него должен быть атрибут <span class="code">value</span> со значением poli.</li>
+			<li>В тег select добавьте тег <span class="code">option</span>, а внутрь тега напигите "кремниевые". У него должен быть атрибут <span class="code">value</span> со значением silicon.</li>
+			<li>Для тега option со значением <span class="code">value='mono'</span> укажите атрибут <span class="code">selected</span></li>
+		</ul>
+
+	</div>
+	<ul id="testResult"></ul>
+	<div class="submit_box">
+		<button id="submit">Проверить</button>
+		<p>Код: <span id="code">пример кода!</span></p>
+	</div>
+	<div class="fields">
+		<div class="field">
+			<h3>HTML:</h3>
+			<textarea id="html"
+			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
+			></textarea>
+		</div>
+		<div class="field">
+			<h3>CSS:</h3>
+			<textarea id="css" 
+			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
+			></textarea>
+		</div>
+	</div>
+
+	<h3>Результат:</h3>
+	<div id="forResult"></div>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="tests.js"></script>
+	<script type="text/javascript" src="calculate_code_obf.js"></script>	
+</body>
+</html>
