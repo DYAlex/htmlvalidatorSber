@@ -32,7 +32,7 @@ html.value = `
 css.value = `
 
 body {
-  background-color: #6f9e80;
+  background-color: rgb(235, 236, 236);
   margin: 0;
   font-family: sans-serif;
 }
