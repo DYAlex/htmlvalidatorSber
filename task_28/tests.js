@@ -60,10 +60,6 @@ const testHandler = ()=>{
 			dom.querySelectorAll(selector).forEach(selectorElem=>{
 				if (elem.innerText){
 					testResult &&= (selectorElem.innerText.trim() === elem.innerText);
-					console.log('_-_-')
-					console.log(selectorElem.innerText.trim())
-					console.log(elem.innerText)
-					console.log('_-_-')
 				}
 				try{
 					Object.entries(elem.styleList).forEach(style=>{

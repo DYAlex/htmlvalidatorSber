@@ -1,37 +1,25 @@
- 
+
 
 const tests = [
-	{
-		"msg": 'Всем input элементам укажите атрибут type со значением range',
-		"tag": 'input[type="range"]',
-		"class": undefined,
-		"id": undefined
-	},
-	{
-		"msg": 'Всем input элементам укажите атрибут min со 0',
-		"tag": 'input[min="0"]',
-		"class": undefined,
-		"id": undefined
-	},
-	{
-		"msg": 'Всем input элементам укажите атрибут step со 10',
-		"tag": 'input[step="10"]',
-		"class": undefined,
-		"id": undefined
-	},
-	{
-		"msg": 'Всем input элементам укажите атрибут max со 100',
-		"tag": 'input[max="100"]',
-		"class": undefined,
-		"id": undefined
-	},
-	{
-		"msg": 'Чтобы выравнить элементы укажите тегам div класс field',
-		"tag": 'div.field',
-		"class": undefined,
-		"id": undefined
-	},
 
+	{
+		"msg": "Цвет заднего фона у тега p",
+		"tag": 'p',
+		"class": undefined,
+		"id": undefined,
+		'styleList': {
+			'background-color': 'rgb(236,240,241)'
+		}
+	},
+	{
+		"msg": "Цвет текста у тега p",
+		"tag": 'p',
+		"class": undefined,
+		"id": undefined,
+		'styleList': {
+			'color': 'rgb(52,73,94)'
+		}
+	},
 
 ]
 
@@ -56,7 +44,11 @@ const testHandler = ()=>{
 				}
 				try{
 					Object.entries(elem.styleList).forEach(style=>{
-					testResult &&= (selectorElem.style[style[0]] === style[1]);
+					let value = selectorElem.style[style[0]];
+					if (value.substring(0, 3) === 'rgb'){
+						value = value.replaceAll(' ', '');
+					}
+					testResult &&= (value === style[1]);
 				})} catch{};
 			})
 		}
