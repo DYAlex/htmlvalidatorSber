@@ -1,19 +1,38 @@
-// 
+/*
+Укажите для тега body задний фон media/background.jpeg
+Укажите для тега body размер заднего фона со значением cover
+Укажите для тега body позицию заднего фона по центру
+*/ 
 
 const tests = [
 
 	{
-		"msg": "Укажите всем четным элементам div класс even",
-		"tag": 'div:nth-child(2n).even',
+		"msg": "Укажите для тега body задний фон media/background.jpeg",
+		"tag": 'body',
 		"class": undefined,
-		"id": undefined
+		"id": undefined,
+		"styleList":{
+			'background-image': 'url("media/background.jpeg")'
+		}
 	},
 	{
-		"msg": "Второй абзац",
-		"tag": 'div:nth-child(2n+1).odd',
+		"msg": "Укажите для тега body размер заднего фона со значением cover",
+		"tag": 'body',
 		"class": undefined,
-		"id": undefined
-	}
+		"id": undefined,
+		"styleList":{
+			'background-size': 'cover'
+		}
+	},
+	{
+		"msg": "Укажите для тега body задний фон media/background.jpeg",
+		"tag": 'body',
+		"class": undefined,
+		"id": undefined,
+		"styleList":{
+			'background-position': 'center center'
+		}
+	},
 
 ]
 
