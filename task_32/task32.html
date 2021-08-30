@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="task">
+		<div><b>Задачи:</b></div>
+			<ul>
+				<li>Укажите внешнему <span class="code">div</span> элементу класс facts</li>
+				<li>Для элемента с классом facts укажите <span class="code">display: grid;</span>
+				<li>С помощью стиля <span class="code">grid-template-columns</span> сформируйте 3 столбца, где столбец по середине в 2 раза больше боковых. Используйте единицы измерения fr.</li>
+			</ul>
+		<div>
+			<b>Подсказка:</b>
+			<div><img src="media/prompt.png" width='500'></div>
+		</div>
+	</div>
+	<ul id="testResult"></ul>
+	<div class="submit_box">
+		<button id="submit">Проверить</button>
+		<p>Код: <span id="code">пример кода!</span></p>
+	</div>
+	<div class="fields">
+		<div class="field">
+			<h3>HTML:</h3>
+			<textarea id="html"
+			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
+			></textarea>
+		</div>
+		<div class="field">
+			<h3>CSS:</h3>
+			<textarea id="css" 
+			onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"
+			></textarea>
+		</div>
+	</div>
+
+	<h3>Результат:</h3>
+	<div id="forResult"></div>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="tests.js"></script>
+	<script type="text/javascript" src="calculate_code_obf.js"></script>	
+</body>
+</html>
