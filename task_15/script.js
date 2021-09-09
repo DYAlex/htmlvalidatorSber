@@ -15,8 +15,8 @@ html.value = `
 </head>
 <body>
     <div>
-		<input id='chb'>
-		<label for='chb'></label>
+		<input id='checkbox'>
+		<label for='checkbox'></label>
     </div>
 </body>
 </html>
@@ -56,13 +56,13 @@ input:checked+label{
   background-color: #27ae60;
 }
 
-a-name:checked+label{
+name:checked+label{
 	animation-name: example;
 }
-a-duration:checked+label{
+duration:checked+label{
 	animation-duration: 1s;
 }
-a-iteration-count:checked+label{
+iteration-count:checked+label{
 	animation-iteration-count: 2;
 }
 

@@ -1,8 +1,8 @@
 
 const tests = [
 	{
-		"msg": "Укажите элементу с идентификатором chb атрибут type со значением checkbox",
-		"tag": 'input#chb[type="checkbox"]',
+		"msg": "Укажите элементу с идентификатором checkbox атрибут type со значением checkbox",
+		"tag": 'input#checkbox[type="checkbox"]',
 		"class": undefined,
 		"id": undefined
 	},
@@ -13,21 +13,21 @@ const tests = [
 		"id": undefined
 	},
 	{
-		"msg": "Укажите элементу input класс a-name, где указывается имя анимации",
+		"msg": "Укажите элементу input класс name, где указывается имя анимации",
 		"tag": 'input',
-		"class": 'a-name',
+		"class": 'name',
 		"id": undefined
 	},
 	{
-		"msg": "Добавьте элементу input класс a-duration, где указывается продолжительность анимации",
+		"msg": "Добавьте элементу input класс duration, где указывается продолжительность анимации",
 		"tag": 'input',
-		"class": 'a-duration',
+		"class": 'duration',
 		"id": undefined
 	},
 	{
-		"msg": "Добавьте элементу input класс a-iteration-count, где указывается колличество повторений анимации",
+		"msg": "Добавьте элементу input класс iteration-count, где указывается колличество повторений анимации",
 		"tag": 'input',
-		"class": 'a-iteration-count',
+		"class": 'iteration-count',
 		"id": undefined
 	}
 ]

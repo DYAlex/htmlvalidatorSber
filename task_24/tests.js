@@ -20,7 +20,7 @@ const tests = [
 		"id": undefined
 	},
 	{
-		"msg": 'В атрибут src третей картинки укажите media/cat.png',
+		"msg": 'В атрибут src третьей картинки укажите media/cat.png',
 		"tag": '.row:nth-child(2) img:nth-child(1)',
 		"class": undefined,
 		"id": undefined

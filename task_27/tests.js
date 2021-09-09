@@ -8,19 +8,19 @@ const tests = [
 		"id": undefined
 	},
 	{
-		"msg": 'Всем input элементам укажите атрибут min со 0',
+		"msg": 'Всем input элементам укажите атрибут min со значением 0',
 		"tag": 'input[min="0"]',
 		"class": undefined,
 		"id": undefined
 	},
 	{
-		"msg": 'Всем input элементам укажите атрибут step со 10',
+		"msg": 'Всем input элементам укажите атрибут step со значением 10',
 		"tag": 'input[step="10"]',
 		"class": undefined,
 		"id": undefined
 	},
 	{
-		"msg": 'Всем input элементам укажите атрибут max со 100',
+		"msg": 'Всем input элементам укажите атрибут max со значением 100',
 		"tag": 'input[max="100"]',
 		"class": undefined,
 		"id": undefined

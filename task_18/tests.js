@@ -14,7 +14,7 @@ const tests = [
 		"id": undefined
 	},
 	{
-		"msg": "Внутрь первой карточки добавьте div с классом sticker и тектом sale",
+		"msg": "Внутрь первой карточки добавьте div с классом sticker и текстом sale",
 		"tag": 'body>div:nth-child(1) div',
 		"class": 'sticker',
 		"id": undefined,

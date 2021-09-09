@@ -8,13 +8,13 @@
 const tests = [
 
 	{
-		"msg": "Добавьте тегу с классом box тег slide_box",
+		"msg": "Добавьте тегу с классом box класс slide_box",
 		"tag": 'div.box',
 		"class": 'slide_box',
 		"id": undefined
 	},
 	{
-		"msg": "В css для класса slide_box добавьте относительное позиционирование, отступ сверху (top) 20px, а с лева (left) -160px ",
+		"msg": "В CSS для класса slide_box добавьте относительное позиционирование, отступ сверху (top) 20px, а слева (left) -160px ",
 		"tag": 'div.slide_box',
 		"class": undefined,
 		"id": undefined,

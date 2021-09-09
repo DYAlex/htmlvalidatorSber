@@ -8,21 +8,21 @@ const tests = [
 		"id": undefined
 	},
 	{
-		"msg": 'В тег select добавьте тег option, а внутрь тега напигите "монокристалический". У него должен быть атрибут value со значением mono.',
+		"msg": 'В тег select добавьте тег option, а внутрь тега напишите "монокристаллический". У него должен быть атрибут value со значением mono.',
 		"tag": 'select option[value="mono"]',
 		"class": undefined,
 		"id": undefined,
-		'innerText': "монокристалический"
+		'innerText': "монокристаллический"
 	},
 	{
-		"msg": 'В тег select добавьте тег option, а внутрь тега напигите "поликристалический". У него должен быть атрибут value со значением poli.',
+		"msg": 'В тег select добавьте тег option, а внутрь тега напишите "поликристаллический". У него должен быть атрибут value со значением poli.',
 		"tag": 'select option[value="poli"]',
 		"class": undefined,
 		"id": undefined,
-		'innerText': 'поликристалический'
+		'innerText': 'поликристаллический'
 	},
 	{
-		"msg": 'В тег select добавьте тег option, а внутрь тега напигите "кремниевые". У него должен быть атрибут value со значением silicon.',
+		"msg": 'В тег select добавьте тег option, а внутрь тега напишите "кремниевые". У него должен быть атрибут value со значением silicon.',
 		"tag": 'select option[value="silicon"]',
 		"class": undefined,
 		"id": undefined,
