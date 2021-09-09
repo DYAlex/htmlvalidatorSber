@@ -25,7 +25,7 @@ const tests = [
 		"id": undefined
 	},
 	{
-		"msg": "Добавьте элементу input класс iteration-count, где указывается колличество повторений анимации",
+		"msg": "Добавьте элементу input класс iteration-count, где указывается количество повторений анимации",
 		"tag": 'input',
 		"class": 'iteration-count',
 		"id": undefined

@@ -26,7 +26,7 @@ const tests = [
 		"id": undefined
 	},
 	{
-		"msg": 'Чтобы выравнить элементы укажите тегам div класс field',
+		"msg": 'Чтобы корректно расположить элементы укажите тегам div класс field',
 		"tag": 'div.field',
 		"class": undefined,
 		"id": undefined
