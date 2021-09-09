@@ -9,12 +9,7 @@ html.value = `
 <head>
 </head>
 <body>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
+
 </body>
 </html>
 `;
@@ -24,25 +19,6 @@ body {
   background-color: #6f9e80;
   margin: 0;
   font-family: sans-serif;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-
-div{
-	width: 50px;
-	height: 50px;
-	border: 2px solid black;
-}
-
-.even{
-	background-color: #27ae60;
-	border-radius: 50%;
-}
-
-.odd{
-	background-color: #8e44ad;
 }
 `
 
