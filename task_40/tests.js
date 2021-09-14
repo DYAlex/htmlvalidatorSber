@@ -25,7 +25,7 @@ const tests = [
 		}
 	},
 	{
-		"msg": "Укажите для тега body задний фон media/background.jpeg",
+		"msg": "Укажите для тега body позицию заднего фона по центру",
 		"tag": 'body',
 		"class": undefined,
 		"id": undefined,
