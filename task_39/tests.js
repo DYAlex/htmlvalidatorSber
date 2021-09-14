@@ -9,7 +9,7 @@ const tests = [
 		"id": undefined
 	},
 	{
-		"msg": "Второй абзац",
+		"msg": "Укажите всем нечетным элементам div класс odd",
 		"tag": 'div:nth-child(2n+1).odd',
 		"class": undefined,
 		"id": undefined
