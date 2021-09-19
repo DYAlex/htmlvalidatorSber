@@ -34,7 +34,6 @@ css.value = `
 body {
   background-color: #6f9e80;
   margin: 0;
-  font-family: sans-serif;
 }
 
 .card {

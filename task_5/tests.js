@@ -13,7 +13,7 @@ const tests = [
 		"class": undefined,
 		"id": undefined,
 		'styleList': {
-			"font-family": "Raleway, sans-serif"
+			"font-family": "Raleway"
 		}
 	},
 
